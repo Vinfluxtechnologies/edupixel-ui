@@ -24,11 +24,32 @@ $(window).on("load", function () {
           centerMode: true,
           centerPadding: '32px',
         }
-      },
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
+      }
     ]
+  });
+
+  $(".slider2").each(function () {
+    $(this).slick({
+      dots: false,
+      infinite: false,
+      arrows: true,
+      prevArrow: '<button class="prev-btn" type="buton"><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="51" height="51" rx="25.5" fill="#F8F8F8"/><rect x="0.5" y="0.5" width="51" height="51" rx="25.5" stroke="#141414"/><path d="M29.375 19.25L22.625 26L29.375 32.75" stroke="#141414" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      nextArrow: '<button class="next-btn" type="buton"><svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="51" height="51" rx="25.5" fill="#F8F8F8"/><rect x="0.5" y="0.5" width="51" height="51" rx="25.5" stroke="#141414"/><path d="M22.625 32.75L29.375 26L22.625 19.25" stroke="#141414" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 1,
+            infinite: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+          }
+        },
+      ]
+    });
   });
 
   //counter animation
